@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Management App</title>
+  <style>
+    /* Resetăm stilurile implicite ale browser-ului pentru a înlătura orice formatare implicită */
+body, h1, h2, ul, li, p, button, input, textarea {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Stilizăm elementele principale */
+body {
+  font-family: Verdana, sans-serif;
+  line-height: 1.4; /*linia dintre scris*/
+  background-image: url('https://i.pinimg.com/1200x/4a/fc/fa/4afcfa018dbecb8493f5a3e32241c740.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+}
+h1{
+    font-family: Verdana;
+    color:darkslategray;
+    margin-left: 490px;
+    padding-top: 50px;
+}
+
+#addTaskBtn{
+    margin-left: 100px;
+    margin-top:25px;
+    padding: 8px 12px;
+    font-size: 25px;
+    font-style: italic;
+    background-color:darkslategray;
+    color:lightgray;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+button{
+    margin-left: 100px;
+    margin-top:25px;
+    padding: 8px 12px;
+    font-size: 15px;
+    font-style: italic;
+    background-color:darkslategray;
+    color:lightgray;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+header > p{
+    margin-top: 50px;
+    margin-left:100px;
+    font-size: 25px;
+    color:darkslategray;
+    font-family: Verdana;
+}
+h2{
+    margin-top: 50px;
+    margin-left:50px;
+    font-size: 15px;
+    color:darkslategray;
+    font-family: Verdana;
+}
+#taskDialog{
+    margin-left:300px;
+    margin-top: 250px;
+    font-size: 20px;
+    color:darkslategray;
+    font-family: Verdana;
+}
+#taskForm > input{
+    margin-left:20px;
+    margin-top: 1px;
+    font-size: 15px;
+    color:darkslategray;
+    font-family: Verdana;
+} 
+#taskForm > textarea{
+    margin-left:50px;
+    font-size: 15px;
+    color:darkslategray;
+    font-family: Verdana;
+    margin-top: 10px;
+}   
+main{
+    font-family: Verdana;
+    color:darkslategray;
+    margin-left: 50px;
+    padding-top: 40px;
+}
+ul{
+    margin-left: 70px;
+}
+.imagine {
+  position: fixed;
+  top: 0;
+  left: 950px;
+  padding-top: 200px;
+}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Task Management App</h1>
+    <p>Welcome to our task management application!<br> Here you can organize and track tasks to stay productive.</p>
+    <button id="addTaskBtn">Add Task</button>
+</header>
+
+  <dialog id="taskDialog">
+    
+    <form id="taskForm">
+      <label for="title">Title:</label>
+      <input type="text" id="title">
+      <br>
+      <label for="description">Description:</label>
+      <textarea id="description" rows="10"></textarea>
+      <br>
+      <label for="assignee">Assignee's Email:</label>
+      <input type="email" id="assignee" required>
+      <br>
+      <button type="submit">Add Task</button>
+      <button id="cancelBtn">Cancel</button>
+    
+    </form>
+</dialog>
+<main>
+    <section>
+      <h2>In Progress Tasks:</h2>
+      <ul id="inProgressTasks"></ul>
+    </section>
+    <section>
+      <h2>Completed Tasks:</h2>
+      <ul id="completedTasks"></ul>
+    </section>
+  </main>
+  <div class="imagine">
+    <img src="https://i.pinimg.com/564x/d0/5b/84/d05b84fec43b293b00b576d12224dcd7.jpg" width="300" height="350">
+  </div>
+  <script src="homework1.js"></script>
+</body>
+</html>
